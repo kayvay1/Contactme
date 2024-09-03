@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Card Form</title>
+    <style>
+        body{
+            overflow: hidden;
+        }
+        #mainsection {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            box-sizing: border-box;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        #insidesection {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        div {
+            text-align: center;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px 2px grey;
+            padding: 20px;
+            max-width: 500px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        div:hover{
+            box-shadow: 0px 0px 10px 4px grey;
+        }
+
+        h1 {
+            margin: 0 0 20px 0;
+            font-size: 24px;
+            color: #0300c4;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        input[type="text"], 
+        input[type="tel"], 
+        input[type="email"], 
+        textarea, 
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 0px;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        textarea {
+            height: 100px;
+            resize: none;
+            overflow-y: scroll;
+        }
+
+        button {
+            background-color: orangered;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 0px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: rgb(163, 47, 5);
+        }
+
+
+        #secondsection{
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 10px;
+            text-align: center;
+            z-index: 1;
+        }
+        #secondsection>a{
+            text-decoration: none;
+            margin: 0px 8px;
+            color: rgba(40, 40, 40, 0.73);
+        }
+
+
+        @media (max-width: 600px) {
+            div {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            button {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<section id="mainsection">
+    <section id="insidesection">
+        <div>
+            <h1> <b>ANIL KAY</b> </h1>
+            <form action="https://formspree.io/f/mbjnjnzo" method="POST">
+                <label for="Name">
+                    <input type="text" name="Name" id="Name" placeholder="Enter Your Name" required>
+                </label>
+                <label for="Phone">
+                    <input type="tel" name="Phone" id="Phone" placeholder="Enter Your Phone Number" required>
+                </label>
+                <label for="Email">
+                    <input type="email" name="Email" id="Email" placeholder="Enter Your Email">
+                </label>
+                <label for="Option">
+                    <select name="Option" id="Option">
+                        <option value="NotSelected">--Select Query Type</option>
+                        <option value="GST">GST Related</option>
+                        <option value="IncomeTax">Income Tax Related</option>
+                        <option value="Accounting">Accounting Related</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </label>
+                <label for="TextContent">
+                    <textarea name="TextContent" id="TextContent" placeholder="Enter Your Message Or Query"></textarea>
+                </label>
+                <button type="submit">Submit Query</button>
+            </form>
+        </div>
+    </section>
+</section>
+
+    <section id="secondsection">
+        <a href="https://backtick.in">Anil Kay</a>
+        <a href="https://wa.link/wr7d1s">Contact</a>
+        <a href="https://backtick.in">Privacy & terms</a>
+    </section>
+
+</body>
+</html>
